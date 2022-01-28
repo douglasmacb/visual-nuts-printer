@@ -1,0 +1,51 @@
+{
+  "name": "visual-nuts-printer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/main/server.js",
+    "build": "rimraf dist && tsc",
+    "dev": "nodemon src/main/server.ts",
+    "up": "npm run build && docker-compose up -d",
+    "down": "docker-compose down",
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
+    "test:verbose": "jest --passWithNoTests --runInBand",
+    "test:unit": "npm test -- --watch -c jest-unit-config.js",
+    "test:integration": "npm test -- --watch -c jest-integration-config.js",
+    "test:staged": "npm test -- --findRelatedTests ./src/**/**/*",
+    "test:ci": "npm test -- --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douglasmacb/visual-nuts-printer.git"
+  },
+  "author": "Douglas Miranda <douglasmacbrito@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/douglasmacb/visual-nuts-printer/issues"
+  },
+  "homepage": "https://github.com/douglasmacb/visual-nuts-printer#readme",
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "@types/node": "^13.13.5",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard-with-typescript": "^11.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "git-commit-msg-linter": "^2.4.2",
+    "husky": "^4.2.5",
+    "jest": "^25.5.4",
+    "lint-staged": "^10.5.4",
+    "nodemon": "^2.0.15",
+    "ts-jest": "^25.5.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.8.3"
+  },
+  "engines": {
+    "node": "12.x"
+  }
+}
