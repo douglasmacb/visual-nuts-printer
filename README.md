@@ -8,13 +8,10 @@
    - Lint-staged
    - Eslint
    - Nodemon
-   - Docker
 
 ### Requirements
    - Nodejs >= 12.x 
    - NPM
-   - Docker Engine
-   - Docker Compose
 
 ## 1st step
 
