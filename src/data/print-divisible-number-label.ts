@@ -3,7 +3,7 @@ import { Printer } from '../domain/usecases/printer'
 import { LabelUtils } from '../utils/label-utils'
 import { NumbersUtils } from '../utils/numbers-utils'
 
-export class PrintDivisibleNumbers implements Printer {
+export class PrintDivisibleNumberLabel implements Printer {
     
     constructor (private readonly from: number, private readonly to: number) {}
 
